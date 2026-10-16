@@ -1,13 +1,13 @@
 package pbo.models;
 
-public class Teh extends MenuItem implements Costumizable {
+public class Teh extends MenuItem{
 
-    public Teh(String id, String nama, int hargaBase, int stok) {
+    public Teh(String id, String nama, int hargaBase, int stok) throws InputTidakValidException {
         super(id, nama, hargaBase, stok);
     }
 
     @Override 
-    public double hitungHargaTotal() {
+    public double hitungHargaTotal(int jumlah) {
         return 0;
     }   
 

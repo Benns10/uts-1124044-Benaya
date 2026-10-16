@@ -13,7 +13,7 @@ public class MenuItemController {
 
     public void printAllHewan() {
         if (daftarMenu.isEmpty()) {
-            System.out.println("Belum ada pasien hewan yang terdaftar.");
+            System.out.println("Belum ada menu yang terdaftar.");
             return;
         }
         for (MenuItem m : daftarMenu) {
