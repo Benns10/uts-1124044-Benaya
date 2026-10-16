@@ -1,6 +1,6 @@
 package pbo.models;
 
-public class Kopi extends MenuItem {
+public class Kopi extends MenuItem implements Costumziable {
 
     public Kopi(String id, String nama, int hargaBase, int stok) {
         super(id, nama, hargaBase, stok);

@@ -1,6 +1,6 @@
 package pbo.models;
 
-public abstract class MenuItem implements Costumizable{
+public abstract class MenuItem {
     private String id;
     private String nama;
     private int hargaBase;
@@ -26,7 +26,7 @@ public abstract class MenuItem implements Costumizable{
     public void setStok(int stok) { this.stok = stok; }
 
     public abstract String getOrderDetail();
-    public abstract double hitungHargaTotal();
+    public abstract double hitungHargaTotal(int jumlah);
 
 
 }
