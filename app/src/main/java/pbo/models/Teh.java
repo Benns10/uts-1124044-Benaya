@@ -1,18 +1,49 @@
 package pbo.models;
 
-public class Teh extends MenuItem{
+import java.util.List;
 
+public class Teh extends MenuItem implements Customizable {
+    private int boba = 0;
+    private int karamel = 0;
+    private double totalTambahan = 0;
     public Teh(String id, String nama, int hargaBase, int stok) throws InputTidakValidException {
         super(id, nama, hargaBase, stok);
     }
 
     @Override 
-    public double hitungHargaTotal(int jumlah) {
-        return 0;
-    }   
+    public double hitungHargaTotal() {
+        return this.hargaBase + this.totalTambahan;
+    }
+
+    @Override   
+    public void customize(List<Integer> customizations) {
+        for (int pilih : customizations) {
+            tambah(pilih);
+        }
+    } 
+
+    @Override
+    public void customize(int[] customizations) {
+        for (int pilih : customizations) {
+            tambah(pilih);
+        }
+    }
+
+    public double getTotalTambahan() {
+        return totalTambahan;
+    }
+    private void tambah(int tambah) {
+        if (pilih == 1) {
+            this.boba++;
+            this.totalTambahan += 1000;
+        } else if (pilih == 2) {
+            this.karamel++;
+            this.totalTambahan += 3000;
+        }
+    }
 
     @Override
     public String getOrderDetail() {
-       return "Anjing [";
+       return "Menu: " + nama + " | Tambahan boba : " + boba + " | Tambahan Karamel : " + karamel ;
     }
 }

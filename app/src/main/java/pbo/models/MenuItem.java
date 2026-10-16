@@ -1,10 +1,10 @@
 package pbo.models;
 
-public abstract class MenuItem implements Customizable {
-    private String id;
-    private String nama;
-    private int hargaBase;
-    private int stok;
+public abstract class MenuItem {
+    protected String id;
+    protected String nama;
+    protected int hargaBase;
+    protected int stok;
 
     public MenuItem(String id, String nama, int hargaBase, int stok) throws InputTidakValidException {
         if (hargaBase <= 0 || stok <= 0) {
@@ -32,7 +32,7 @@ public abstract class MenuItem implements Customizable {
     public abstract double hitungHargaTotal();
 
     public double hitungHargaTotal(int jumlah) throws StokTidakCukupException, InputTidakValidException {
-        validasiJumlah(jumlah);
         this.stok -= jumlah;
+        return hargaBase * jumlah;
     }
 }
