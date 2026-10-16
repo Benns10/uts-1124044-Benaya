@@ -32,7 +32,7 @@ public class Kopi extends MenuItem implements Customizable{
     public double getTotalTambahan() {
         return totalTambahan;
     }
-    private void tambah(int tambah) {
+    private void tambah(int pilih) {
         if (pilih == 1) {
             this.rum++;
             this.totalTambahan += 3000;

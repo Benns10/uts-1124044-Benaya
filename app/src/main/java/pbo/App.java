@@ -1,10 +1,10 @@
 package pbo;
 
-import pbo.views.KlinikView;
+import pbo.views.MenuView;
 
 public class App {
     public static void main(String[] args) {
-        KlinikView view = new KlinikView();
+        MenuView view = new MenuView();
         view.showMenu();
     }
 }

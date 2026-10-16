@@ -32,7 +32,7 @@ public class Roti extends MenuItem implements Customizable{
     public double getTotalTambahan() {
         return totalTambahan;
     }
-    private void tambah(int tambah) {
+    private void tambah(int pilih) {
         if (pilih == 1) {
             this.meses++;
             this.totalTambahan += 500;
